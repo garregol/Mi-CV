@@ -135,6 +135,47 @@
             margin-left: 20px;
             padding-left: 15px;
         }
+        @media print {
+            body {
+                background-color: white; /* Ahorra tinta y queda más limpio en PDF */
+                -webkit-print-color-adjust: exact;
+            }
+            .container {
+                width: 100%;
+                max-width: 100%;
+                margin: 0;
+                padding: 0 10px; /* Menos relleno lateral */
+                box-shadow: none;
+                border: none;
+            }
+            header {
+                margin-bottom: 10px;
+                padding-bottom: 10px;
+            }
+            header h1 {
+                font-size: 2em; /* Nombre un poco más chico */
+            }
+            .profile-pic {
+                width: 100px; /* Foto más chica para ganar espacio */
+                height: 100px;
+                margin-bottom: 10px;
+            }
+            .section {
+                margin-bottom: 15px; /* Menos espacio entre secciones */
+                break-inside: avoid; /* Intenta no cortar secciones a la mitad */
+            }
+            .section h2 {
+                font-size: 1.3em;
+                margin-bottom: 5px;
+                padding-bottom: 5px;
+            }
+            .item {
+                margin-bottom: 10px; /* Menos espacio entre items */
+            }
+            p, li {
+                font-size: 0.95em; /* Texto apenas más pequeño */
+            }
+        }
     </style>
 </head>
 <body>
